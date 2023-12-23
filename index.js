@@ -1,11 +1,11 @@
 const express =require("express");
-const cors=require ("cors");
 const { connection } = require("./db");
 const userRouter = require("./Routes/User.routes");
 const authMiddleware = require("./Middleware/authentication.middleware");
 const blogRouter = require("./Routes/Blog.routes");
 const adminRouter = require("./Routes/Admin.routes");
 require("dotenv").config()
+const cors=require ("cors");
 
 const app=express()
 const PORT=process.env.PORT || 5000
