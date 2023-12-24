@@ -13,9 +13,9 @@ const PORT=process.env.PORT || 5000
 app.use(cors())
 app.use(express.json())
 
-app.get("/",(req,res)=>{
-  res.send('Hey this server is running')
-})
+// app.get("/",(req,res)=>{
+//   res.send('Hey this server is running')
+// })
 
 app.use("/user",userRouter)
 app.use(authMiddleware)
