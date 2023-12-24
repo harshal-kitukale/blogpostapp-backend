@@ -18,7 +18,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/user",userRouter)
-app.use(authMiddleware)
+// app.use(authMiddleware)
 app.use("/admin",adminRouter)
 app.use("/blog",blogRouter)
 
