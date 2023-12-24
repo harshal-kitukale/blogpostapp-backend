@@ -1,7 +1,7 @@
 const express =require("express");
 const { connection } = require("./db");
 const userRouter = require("./Routes/User.routes");
-// const authMiddleware = require("./Middleware/authentication.middleware");
+const authMiddleware = require("./Middleware/authentication.middleware");
 const blogRouter = require("./Routes/Blog.routes");
 const adminRouter = require("./Routes/Admin.routes");
 require("dotenv").config()
@@ -18,7 +18,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/user",userRouter)
-// app.use(authMiddleware)
+app.use(authMiddleware)
 app.use("/admin",adminRouter)
 app.use("/blog",blogRouter)
 
